@@ -1,18 +1,18 @@
 package tarea.pkg2;
 
-class Moneda {
+abstract class Moneda {
 
     public Moneda(){
         
     }
-    public String getSerie(){
+    public Moneda getSerie(){
         return this;
     }
 }
 
 class Moneda100 extends Moneda{
     public Moneda100(){
-        
+        super();
     }
     public int valor(){
         return 100;
@@ -21,7 +21,7 @@ class Moneda100 extends Moneda{
 
 class Moneda500 extends Moneda{
     public Moneda500(){
-        
+        super();
     }
     public int valor(){
         return 500;
@@ -30,7 +30,7 @@ class Moneda500 extends Moneda{
         
 class Moneda1000 extends Moneda{
     public Moneda1000(){
-        
+        super();
     }
     public int valor (){
         return 1000;
