@@ -8,6 +8,8 @@ public class Tarea2 {
         Comprador p = new Comprador();
         Moneda m = new Moneda();
         System.out.println("hola");
+        System.out.println("xd");
+        
     }
 
 }
