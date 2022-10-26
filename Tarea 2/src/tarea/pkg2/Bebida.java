@@ -4,10 +4,12 @@ abstract class Bebida {
 
     private String saborBebida;
     private int precio;
+    private int serie;
 
-    public Bebida(int numSerie, int precio, String saborBebida) {
+    public Bebida(int serie, int precio, String saborBebida) {
         this.saborBebida = saborBebida;
         this.precio = precio;
+        this.serie = serie;
     }
 
     public String getSabor() {
@@ -22,27 +24,40 @@ abstract class Bebida {
         return serie;
     }
 
-    public abstract String beber() {
-    }
+    public abstract String beber();
+
 }
 
-public class CocaCola extends Bebida {
+abstract class CocaCola extends Bebida {
 
-    public CocaCola(int precio) {
-        super(precio);
+    public CocaCola(int precio, int serie, String sabor) {
+        super(precio, serie, sabor);
     }
-}
 
-public class Sprite extends Bebida {
-
-    public Sprite(int precio) {
-        super(precio);
+    public String beber() {
+        System.out.println("Gluglu");
+        return "Sprite";
     }
-}
 
-public class Fanta extends Bebida {
+    abstract class Sprite extends Bebida {
 
-    public Fanta(int precio) {
-        super(precio);
+        public Sprite(int precio, int serie, String sabor) {
+            super(precio, serie, sabor);
+        }
+
+        public String beber() {
+            System.out.println("Gluglu");
+            return "CocaCola";
+        }
     }
-}
+
+    abstract class Fanta extends Bebida {
+
+        public Fanta(int precio, int serie, String sabor) {
+            super(precio, serie, sabor);
+        }
+        public String beber() {
+        System.out.println("Gluglu");
+        return "Fanta";
+    }
+    }
