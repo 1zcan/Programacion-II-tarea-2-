@@ -47,7 +47,7 @@ abstract class CocaCola extends Bebida {
 
         public String beber() {
             System.out.println("Gluglu");
-            return "CocaCola";
+            return "Sprite";
         }
     }
 
@@ -59,5 +59,6 @@ abstract class CocaCola extends Bebida {
         public String beber() {
         System.out.println("Gluglu");
         return "Fanta";
+        }
     }
-    }
+}
