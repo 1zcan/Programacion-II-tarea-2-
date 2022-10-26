@@ -7,7 +7,7 @@ public class Tarea2 {
         Expendedor e = new Expendedor();
         Comprador p = new Comprador();
         Moneda m = new Moneda();
-        holaaaaaaaaaaaaaaaaaa esto es una prueba del git
+        System.out.println("hola");
     }
 
 }
