@@ -9,6 +9,7 @@ public class Tarea2 {
         Moneda m = new Moneda();
         System.out.println("hola");
         System.out.println("xd");
+        System.out.println("toi chato de arreglar bugs");
         
     }
 
