@@ -5,7 +5,7 @@ class Expendedor {
     public Expendedor() {
         Deposito d = new Deposito();
     }
-
+    
 class PagoInsuficienteException extends Exception{
     public PagoInsuficienteException(){
         super("Dinero insuficiente");

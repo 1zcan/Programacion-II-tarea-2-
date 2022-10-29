@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 //codigo reciclado de pa3p
 
-class Deposito {
+class DepositoBebida {
 
     private ArrayList<Bebida> d;
 
-    public Deposito() {
+    public DepositoBebida() {
         d = new ArrayList();
     }
 
@@ -25,4 +25,34 @@ class Deposito {
             return v;
         }
     }
+    public int getSize(){
+        return d.size();
+    }
 }
+
+class DepositoMonedas{
+   private ArrayList<Moneda> c;
+   
+   public DepositoMonedas(){
+       c = new ArrayList();
+   }
+   
+   public void addBebida(Moneda dinero) {
+        c.add(dinero);
+   }
+    public Moneda getMoneda() {
+        if (c.size() == 0) {
+            return null;
+        } else {
+            Moneda x;
+            x = c.remove(0);
+            return x;
+        }
+    }
+     public int getSize(){
+        return c.size();
+    }
+}
+    
+    
+
