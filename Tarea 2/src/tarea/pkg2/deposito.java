@@ -37,7 +37,7 @@ class DepositoMonedas{
        c = new ArrayList();
    }
    
-   public void addBebida(Moneda dinero) {
+   public void addMoneda(Moneda dinero) {
         c.add(dinero);
    }
     public Moneda getMoneda() {
