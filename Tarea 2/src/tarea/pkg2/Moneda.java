@@ -1,38 +1,54 @@
 package tarea.pkg2;
 
 abstract class Moneda {
+    
 
-    public Moneda(){
-        
+    public Moneda() {
+
     }
-    public Moneda getSerie(){
-        return this;
+
+    public String getSerie() {
+        return this.toString();
     }
+
+    abstract int getValue();
 }
 
-class Moneda100 extends Moneda{
-    public Moneda100(){
-        super();
+class Moneda100 extends Moneda {
+
+    public Moneda100() {
     }
-    public int valor(){
+    @Override
+    public int getValue() {
         return 100;
     }
 }
 
-class Moneda500 extends Moneda{
-    public Moneda500(){
-        super();
+class Moneda500 extends Moneda {
+
+     public Moneda500() {
     }
-    public int valor(){
+    @Override
+    public int getValue() {
         return 500;
     }
 }
-        
-class Moneda1000 extends Moneda{
-    public Moneda1000(){
-        super();
+
+class Moneda1000 extends Moneda {
+
+   public Moneda1000() {
     }
-    public int valor (){
+    @Override
+    public int getValue() {
         return 1000;
+    }
+
+class Moneda1500 extends Moneda {
+
+    public Moneda1500() {
+    }
+    @Override
+    public int getValue() {
+        return 1500;
     }
 }
