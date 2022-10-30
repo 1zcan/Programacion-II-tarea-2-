@@ -7,10 +7,7 @@ class Expendedor {
     public Expendedor(int precio) {
         this.precio = precio;
         
-        DepositoMonedas dmCoca = new DepositoMonedas();
-        DepositoMonedas dmSprite = new DepositoMonedas();
-        DepositoMonedas dmFanta= new DepositoMonedas();
-        
+        DepositoMonedas dm = new DepositoMonedas(); 
         DepositoBebida dbCoca = new DepositoBebida();
         DepositoBebida dbSprite = new DepositoBebida();
         DepositoBebida dbFanta = new DepositoBebida(); 
