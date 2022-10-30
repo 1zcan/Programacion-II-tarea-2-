@@ -2,61 +2,57 @@ package tarea.pkg2;
 
 import java.util.ArrayList;
 
-class Deposito {
-
 //codigo reciclado de pa3p
-    class DepositoBebida {
+class DepositoBebida {
 
-        private ArrayList<Bebida> d;
+    private ArrayList<Bebida> d;
 
-        public DepositoBebida() {
-            d = new ArrayList();
-        }
+    public DepositoBebida() {
+        d = new ArrayList();
+    }
 
-        public void addBebida(Bebida k) {
-            d.add(k);
-        }
+    public void addBebida(Bebida k) {
+        d.add(k);
+    }
 
-        public Bebida getBebida() {
-            if (d.size() == 0) {
-                return null;
-            } else {
-                Bebida v;
-                v = d.remove(0);
-                return v;
-            }
-        }
-
-        public int getSize() {
-            return d.size();
+    public Bebida getBebida() {
+        if (d.size() == 0) {
+            return null;
+        } else {
+            Bebida v;
+            v = d.remove(0);
+            return v;
         }
     }
 
-    class DepositoMonedas {
+    public int getSize() {
+        return d.size();
+    }
+}
 
-        private ArrayList<Moneda> c;
+class DepositoMonedas {
 
-        public DepositoMonedas() {
-            c = new ArrayList();
-        }
+    private ArrayList<Moneda> c;
 
-        public void addMoneda(Moneda dinero) {
-            c.add(dinero);
-        }
+    public DepositoMonedas() {
+        c = new ArrayList();
+    }
 
-        public Moneda getMoneda() {
-            if (c.size() == 0) {
-                return null;
-            } else {
-                Moneda x;
-                x = c.remove(0);
-                return x;
-            }
-        }
+    public void addMoneda(Moneda dinero) {
+        c.add(dinero);
+    }
 
-        public int getSize() {
-            return c.size();
+    public Moneda getMoneda() {
+        if (c.size() == 0) {
+            return null;
+        } else {
+            Moneda x;
+            x = c.remove(0);
+            return x;
         }
     }
 
+    public int getSize() {
+        return c.size();
+    }
 }
