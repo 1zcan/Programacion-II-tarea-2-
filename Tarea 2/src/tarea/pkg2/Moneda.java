@@ -42,6 +42,7 @@ class Moneda1000 extends Moneda {
     public int getValue() {
         return 1000;
     }
+}
 
 class Moneda1500 extends Moneda {
 
@@ -52,3 +53,4 @@ class Moneda1500 extends Moneda {
         return 1500;
     }
 }
+
