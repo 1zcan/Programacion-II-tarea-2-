@@ -3,8 +3,14 @@ package tarea.pkg2;
 class Expendedor {
 
     public Expendedor() {
-        DepositoMonedas dm = new DepositoMonedas();
-        DepositoBebida db = new DepositoBebida();
+        DepositoMonedas dmCoca = new DepositoMonedas();
+        DepositoMonedas dmSprite = new DepositoMonedas();
+        DepositoMonedas dmFanta= new DepositoMonedas();
+        
+        DepositoBebida dbCoca = new DepositoBebida();
+        DepositoBebida dbSprite = new DepositoBebida();
+        DepositoBebida dbFanta = new DepositoBebida();
+         
     }
     
 class PagoInsuficienteException extends Exception{
