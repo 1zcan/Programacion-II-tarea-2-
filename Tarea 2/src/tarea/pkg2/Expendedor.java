@@ -12,10 +12,12 @@ class Expendedor {
         DepositoBebida dbSprite = new DepositoBebida();
         DepositoBebida dbFanta = new DepositoBebida(); 
     }
-    
-    public Bebida ComprarBebida(Moneda m, int saborB){
-        if(m == null){
-            
+
+    public void CalVuelto(int  DinIngresado){
+        int VueltoADevolver = (DinIngresado - this.precio)/100;
+        
+        for (int i = 0; i < VueltoADevolver; i++) {
+      
         }
     }
     
@@ -23,23 +25,22 @@ class Expendedor {
     
     
     
-    
-class PagoInsuficienteException extends Exception{
-    public PagoInsuficienteException(){
-        super("Dinero insuficiente");
+    class PagoInsuficienteException extends Exception{
+        public PagoInsuficienteException(){
+         super("Dinero insuficiente");
+        }
     }
-}
 
-class PagoIncorrectoException extends Exception{
-    public PagoIncorrectoException(){
-        super("Pago incorrecto");
+    class PagoIncorrectoException extends Exception{
+        public PagoIncorrectoException(){
+            super("Pago incorrecto");
+        }
     }
-}
 
-class NoHayBebidaException extends Exception{
-    public NoHayBebidaException(){
-        super("Deposito de bebidas vacio");
+    class NoHayBebidaException extends Exception{
+        public NoHayBebidaException(){
+            super("Deposito de bebidas vacio");
+        }
     }
-}
 }
 
