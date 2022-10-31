@@ -12,23 +12,23 @@ public class Tarea2 {
 
         System.out.println("Primera Compra");
         Comprador Ana = new Comprador(moneda100, 2, e);
-        System.out.println();
+        System.out.println(Ana.Vuelto());
 
         System.out.println("Segunda Compra");
         Comprador Bernardo = new Comprador(moneda500, 2, e);
-        System.out.println(e.CalcVuelto());
+        System.out.println(Bernardo.Vuelto());
 
         System.out.println("Tercera Compra");
         Comprador Carlita = new Comprador(moneda1000, 2, e);
-        System.out.println();
+        System.out.println(Carlita.Vuelto());
 
         System.out.println("Cuarta Compra");
         Comprador Damian = new Comprador(moneda1500, 2, e);
-        System.out.println();
+        System.out.println(Damian.Vuelto());
 
         System.out.println("Quinta Compra");
         Comprador Fernanda = new Comprador(moneda1500, 2, e);
-        System.out.println();
+        System.out.println(Fernanda.Vuelto());
     }
 
 }
