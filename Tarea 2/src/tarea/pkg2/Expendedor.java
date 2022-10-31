@@ -23,10 +23,16 @@ class Expendedor {
         
         for (int i = 0; i < VueltoADevolver; i++) {
              dm.addMoneda(new Moneda100());
-      
         }
     }
     
+    public void mensajesVuelto(){
+        if (dm.getSize() != 0) {
+            System.out.println("100");
+        } else {
+            System.out.println("tomaste todo el vuelto");
+        }
+    }
     
     
     
