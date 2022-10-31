@@ -3,14 +3,19 @@ package tarea.pkg2;
 class Expendedor {
     private int precio;
     private int vuelto;
+    private DepositoMonedas dm;
+    private DepositoBebida dbCoca;
+    private DepositoBebida dbSprite;
+    private DepositoBebida dbFanta;
+    
 
     public Expendedor(int precio) {
         this.precio = precio;
         
-        DepositoMonedas dm = new DepositoMonedas(); 
-        DepositoBebida dbCoca = new DepositoBebida();
-        DepositoBebida dbSprite = new DepositoBebida();
-        DepositoBebida dbFanta = new DepositoBebida(); 
+         dm = new DepositoMonedas(); 
+         dbCoca = new DepositoBebida();
+         dbSprite = new DepositoBebida();
+         dbFanta = new DepositoBebida(); 
     }
 
     public void CalVuelto(int  DinIngresado){
