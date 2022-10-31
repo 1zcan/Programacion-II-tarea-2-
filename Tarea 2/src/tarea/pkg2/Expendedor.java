@@ -50,7 +50,7 @@ class Expendedor {
                 if (aux == null) {
                     //
                     dm.addMoneda(mon);
-                    throw new NoHayBebidaException();    
+                    throw new NoHayBebidaException();
                 } else {
                     if (mon.getValue() < aux.getPrecio()) {
                         dbCoca.addBebida(aux);
@@ -58,6 +58,33 @@ class Expendedor {
                     }
                 }
             }
+            if (saborbebida == 2) {
+                aux = dbFanta.getBebida();
+                if (aux == null) {
+                    //
+                    dm.addMoneda(mon);
+                    throw new NoHayBebidaException();
+                } else {
+                    if (mon.getValue() < aux.getPrecio()) {
+                        dbFanta.addBebida(aux);
+                        throw new PagoInsuficienteException();
+                    }
+                }
+            }
+            if (saborbebida == 3) {
+                aux = dbSprite.getBebida();
+                if (aux == null) {
+                    //
+                    dm.addMoneda(mon);
+                    throw new NoHayBebidaException();    
+                } else {
+                    if (mon.getValue() < aux.getPrecio()) {
+                        dbSprite.addBebida(aux);
+                        throw new PagoInsuficienteException();
+                    }
+                }
+            }
+
         } else {
             throw new PagoIncorrectoException();
         }
