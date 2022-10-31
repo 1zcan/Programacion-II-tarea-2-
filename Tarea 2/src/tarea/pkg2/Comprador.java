@@ -18,7 +18,7 @@ class Comprador {
         } finally {
             Moneda d;
             do {
-                d = CalVuelto();
+                d = e.CalVuelto();
                 if (d != null) {
                     vuelto += d.getValue();
                 }
