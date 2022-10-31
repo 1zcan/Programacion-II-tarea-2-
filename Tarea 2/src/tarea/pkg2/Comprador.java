@@ -1,15 +1,28 @@
 package tarea.pkg2;
 
-class Comprador{
+class Comprador {
+
     private int vuelto;
+
     public Comprador(Moneda m, int cualBebida, Expendedor exp) {
-        vuelto = m - Bebida.getPrecio();
+        vuelto = 0;
+        Bebida bebida;
+        try {
+            bebida = exp.comprarBebida(m,cualBebida);
+        } finally {
+            Moneda d;
+            do {
+                d = exp.getVuelto();
+                if (d != null) {
+                    vuelto += d.getValue();
+                }
+            } while (d != null);
+        }
+
     }
-    if(vuelto != 0){
-        vuelto = m;
+
+    public int Vuelto() {
+        return vuelto;
     }
-    else{
-            vuelto = 0;
-    }
-    
+
 }
