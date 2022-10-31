@@ -9,13 +9,19 @@ class Expendedor {
     private DepositoBebida dbFanta;
     
 
-    public Expendedor(int precio) {
+    public Expendedor(int precio,int cantidad) {
         this.precio = precio;
         
          dm = new DepositoMonedas(); 
          dbCoca = new DepositoBebida();
          dbSprite = new DepositoBebida();
          dbFanta = new DepositoBebida(); 
+    
+    for(int i= 0; i < cantidad; i++ ){
+    dbCoca.addBebida(new CocaCola(i +100, precio, "Cola"));
+    dbSprite.addBebida(new CocaCola(i +200, precio, "Sprite"));
+    dbFanta.addBebida(new CocaCola(i +300, precio, "Fanta"));
+}
     }
 
     public void CalVuelto(int  DinIngresado){

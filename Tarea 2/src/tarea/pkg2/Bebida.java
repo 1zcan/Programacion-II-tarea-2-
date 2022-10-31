@@ -28,7 +28,7 @@ abstract class Bebida {
 
 }
 
-abstract class CocaCola extends Bebida {
+    class CocaCola extends Bebida {
 
     public CocaCola(int precio, int serie, String sabor) {
         super(precio, serie, sabor);
@@ -39,7 +39,7 @@ abstract class CocaCola extends Bebida {
         return "Sprite";
     }
 
-    abstract class Sprite extends Bebida {
+    class Sprite extends Bebida {
 
         public Sprite(int precio, int serie, String sabor) {
             super(precio, serie, sabor);
@@ -51,14 +51,15 @@ abstract class CocaCola extends Bebida {
         }
     }
 
-    abstract class Fanta extends Bebida {
+    class Fanta extends Bebida {
 
         public Fanta(int precio, int serie, String sabor) {
             super(precio, serie, sabor);
         }
+
         public String beber() {
-        System.out.println("Gluglu");
-        return "Fanta";
+            System.out.println("Gluglu");
+            return "Fanta";
         }
     }
 }
