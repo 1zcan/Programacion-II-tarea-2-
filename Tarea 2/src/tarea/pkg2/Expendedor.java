@@ -40,6 +40,18 @@ class Expendedor {
         }
     }
     
+    public Bebida comprarBebida(Moneda mon, int saborbebida) throws PagoInsuficienteException, NoHayBebidaException, PagoIncorrectoException{
+        if(mon != null){
+            //Coca=1;Fanta=2;Sprite=3;
+            Bebida aux;
+            int vuelto;
+            if(saborbebida == 1){
+                aux = dbCoca.getBebida();
+                vuelto = CocaCola.getPrecio();
+            }
+        }
+    }
+    
     
     
     
