@@ -24,12 +24,13 @@ class Expendedor {
         }
     }
 
-    public void CalVuelto(int DinIngresado) {
+    public int CalVuelto(int DinIngresado) {
         int VueltoADevolver = (DinIngresado - this.precio) / 100;
 
         for (int i = 0; i < VueltoADevolver; i++) {
             dm.addMoneda(new Moneda100());
         }
+        return VueltoADevolver;
     }
 
     public void mensajesVuelto() {

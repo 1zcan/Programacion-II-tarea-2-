@@ -12,12 +12,13 @@ class Comprador {
         vuelto = 0;
         Bebida bebida;
         try {
-            bebida = exp.comprarBebida(m,cualBebida);
-        }catch(PagoIncorrectoException | NoHayBebidaException | PagoInsuficienteException e){
+            bebida = exp.comprarBebida(m, cualBebida);
+        } catch (PagoIncorrectoException | NoHayBebidaException | PagoInsuficienteException e) {
+            System.out.println(e.getMessage());
         } finally {
             Moneda d;
             do {
-                d = e.getVuelto();
+                d = CalVuelto();
                 if (d != null) {
                     vuelto += d.getValue();
                 }
