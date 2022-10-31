@@ -1,5 +1,9 @@
 package tarea.pkg2;
 
+import tarea.pkg2.Expendedor.NoHayBebidaException;
+import tarea.pkg2.Expendedor.PagoIncorrectoException;
+import tarea.pkg2.Expendedor.PagoInsuficienteException;
+
 class Comprador {
 
     private int vuelto;
@@ -9,10 +13,11 @@ class Comprador {
         Bebida bebida;
         try {
             bebida = exp.comprarBebida(m,cualBebida);
+        }catch(PagoIncorrectoException | NoHayBebidaException | PagoInsuficienteException e){
         } finally {
             Moneda d;
             do {
-                d = exp.getVuelto();
+                d = e.getVuelto();
                 if (d != null) {
                     vuelto += d.getValue();
                 }
